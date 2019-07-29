@@ -1,0 +1,513 @@
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~ (master)
+$ git config --global user.name "Lucas"
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~ (master)
+$ git config --global user.email "lucasmariano.xer@gmail.com"
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~ (master)
+$ git config --global core.editor vim
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~ (master)
+$ git config user.name
+Lucas
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~ (master)
+$ mkdir git-curso
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~ (master)
+$ cd git-curso/
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git init
+Initialized empty Git repository in C:/Users/Lucgit-curso/.git/
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ ls -la
+total 12
+drwxr-xr-x 1 Lucas 197121 0 jul 22 14:04 ./
+drwxr-xr-x 1 Lucas 197121 0 jul 22 14:04 ../
+drwxr-xr-x 1 Lucas 197121 0 jul 22 14:04 .git/
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ cd .git/
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso/.git (_DIR!)
+$ ls
+config       HEAD    info/     refs/
+description  hooks/  objects/
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso/.git (_DIR!)
+$ cd ..
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ vi Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ ls
+Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ vi Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what wibe committed)
+
+        Readme.md
+
+nothing added to commit but untracked files pres (use "git add" to track)
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what wibe committed)
+
+        Readme.md
+
+nothing added to commit but untracked files pres (use "git add" to track)
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git add Readme.md
+warning: LF will be replaced by CRLF in Readme.m
+The file will have its original line endings in r working directory
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Readme.md
+
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ vim Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Readme.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will bommitted)
+  (use "git checkout -- <file>..." to discard ches in working directory)
+
+        modified:   Readme.md
+
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git add Readme.md
+warning: LF will be replaced by CRLF in Readme.m
+The file will have its original line endings in r working directory
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Readme.md
+
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git commit -m "Add Readme.md"
+[master (root-commit) 822b141] Add Readme.md
+ 1 file changed, 5 insertions(+)
+ create mode 100644 Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ vim Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will bommitted)
+  (use "git checkout -- <file>..." to discard ches in working directory)
+
+        modified:   Readme.md
+
+no changes added to commit (use "git add" and/orit commit -a")
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git add Readme.md
+warning: LF will be replaced by CRLF in Readme.m
+The file will have its original line endings in r working directory
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Readme.md
+
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git commit -m "Add mais uma linha"
+[master 08b7d7c] Add mais uma linha
+ 1 file changed, 2 insertions(+)
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git log
+commit 08b7d7cab46cf6d41d7f5a2bf873db3282a307af AD -> master)
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:26:30 2019 -0300
+
+    Add mais uma linha
+
+commit 822b141d790d236914458152fa30f1600d348d6a
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:19:44 2019 -0300
+
+    Add Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git log --decorate
+commit 08b7d7cab46cf6d41d7f5a2bf873db3282a307af AD -> master)
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:26:30 2019 -0300
+
+    Add mais uma linha
+
+commit 822b141d790d236914458152fa30f1600d348d6a
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:19:44 2019 -0300
+
+    Add Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git shirtlog
+git: 'shirtlog' is not a git command. See 'git -lp'.
+
+The most similar command is
+        shortlog
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git shortlog
+Lucas (2):
+      Add Readme.md
+      Add mais uma linha
+
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git log
+commit 08b7d7cab46cf6d41d7f5a2bf873db3282a307af AD -> master)
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:26:30 2019 -0300
+
+    Add mais uma linha
+
+commit 822b141d790d236914458152fa30f1600d348d6a
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:19:44 2019 -0300
+
+    Add Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git show ^C
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git show 822b141d790d236914458152fa30f1600d348
+commit 822b141d790d236914458152fa30f1600d348d6a
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:19:44 2019 -0300
+
+    Add Readme.md
+
+diff --git a/Readme.md b/Readme.md
+new file mode 100644
+index 0000000..27e79cf
+--- /dev/null
++++ b/Readme.md
+@@ -0,0 +1,5 @@
++# Githu
++
++
++Aula de Git e Github para iniciante
++Este é um repositorio testes
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ vim Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git dif
+git: 'dif' is not a git command. See 'git --help
+
+The most similar commands are
+        diff
+        config
+        difftool
+        init
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git diff
+warning: LF will be replaced by CRLF in Readme.m
+The file will have its original line endings in r working directory
+diff --git a/Readme.md b/Readme.md
+index aa64c3a..dd68a4f 100644
+--- a/Readme.md
++++ b/Readme.md
+@@ -4,4 +4,7 @@
+ Aula de Git e Github para iniciante
+ Este é um repositorio testes
+
+-Saiba mais em [lucas.com.br]
++Saiba mais em [lucas.com.br
++
++
++Gostou do curso, quer mais, ajude com uma doaçã
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ g s
+bash: g: command not found
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will bommitted)
+  (use "git checkout -- <file>..." to discard ches in working directory)
+
+        modified:   Readme.md
+
+no changes added to commit (use "git add" and/orit commit -a")
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git commt -am "Edit Readme"
+git: 'commt' is not a git command. See 'git --he.
+
+The most similar command is
+        commit
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git commit -am "Edit Readme"
+warning: LF will be replaced by CRLF in Readme.m
+The file will have its original line endings in r working directory
+[master b7e4578] Edit Readme
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git log
+commit b7e457862769b2d88278fd15017564073a789445 AD -> master)
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:35:21 2019 -0300
+
+    Edit Readme
+
+commit 08b7d7cab46cf6d41d7f5a2bf873db3282a307af
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:26:30 2019 -0300
+
+    Add mais uma linha
+
+commit 822b141d790d236914458152fa30f1600d348d6a
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:19:44 2019 -0300
+
+    Add Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git show
+commit b7e457862769b2d88278fd15017564073a789445 AD -> master)
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:35:21 2019 -0300
+
+    Edit Readme
+
+diff --git a/Readme.md b/Readme.md
+index aa64c3a..dd68a4f 100644
+--- a/Readme.md
++++ b/Readme.md
+@@ -4,4 +4,7 @@
+ Aula de Git e Github para iniciante
+ Este é um repositorio testes
+
+-Saiba mais em [lucas.com.br]
++Saiba mais em [lucas.com.br
++
++
++Gostou do curso, quer mais, ajude com uma doaçã
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git log
+commit b7e457862769b2d88278fd15017564073a789445 AD -> master)
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:35:21 2019 -0300
+
+    Edit Readme
+
+commit 08b7d7cab46cf6d41d7f5a2bf873db3282a307af
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:26:30 2019 -0300
+
+    Add mais uma linha
+
+commit 822b141d790d236914458152fa30f1600d348d6a
+Author: Lucas <lucasmariano.xavier@gmail.com>
+Date:   Mon Jul 22 14:19:44 2019 -0300
+
+    Add Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ vim Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will bommitted)
+  (use "git checkout -- <file>..." to discard ches in working directory)
+
+        modified:   Readme.md
+
+no changes added to commit (use "git add" and/orit commit -a")
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git diff
+warning: LF will be replaced by CRLF in Readme.m
+The file will have its original line endings in r working directory
+diff --git a/Readme.md b/Readme.md
+index dd68a4f..b79d19a 100644
+--- a/Readme.md
++++ b/Readme.md
+@@ -8,3 +8,6 @@ Saiba mais em [lucas.com.br
+
+
+ Gostou do curso, quer mais, ajude com uma doaçã
++
++
++qwert
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git checkout Readme.md
+Updated 1 path from the index
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git diff
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ vim Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git add Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Readme.md
+
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git diff
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git reset HEAD Readme.md
+Unstaged changes after reset:
+M       Readme.md
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git diff
+diff --git a/Readme.md b/Readme.md
+index dd68a4f..0bd999f 100644
+--- a/Readme.md
++++ b/Readme.md
+@@ -8,3 +8,8 @@ Saiba mais em [lucas.com.br
+
+
+ Gostou do curso, quer mais, ajude com uma doaçã
++
++
++
++
++qwert
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git checkout Readme.md
+Updated 1 path from the index
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste
+$ git config user.email
+lucasmariano.xavier@gmail.com
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste)
+$ ssh-keygen -t rsa -b 4096 -C "lucasmariano.xaver@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Luas/.ssh/id_rsa):
+Created directory '/c/Users/Lucas/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Lcas/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Lucas.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:JwUqx2FR7EXGFIx0384ylGO0iQP/AE8rtlNPWD66MM lucasmariano.xavier@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|      +=**B.o    |
+|     o ooX+O =   |
+|    . +.o.@ % .  |
+|     o ..= @ =   |
+|        S * E o  |
+|         + = o   |
+|          .      |
+|                 |
+|                 |
++----[SHA256]-----+
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/git-curso (maste)
+$ cd ~/.ssh/
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/.ssh (master)
+$ ls
+id_rsa  id_rsa.pub
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/.ssh (master)
+$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDJG0Vr1pAug1uIsWPa399TPJLJPXFkm8lTtLhu59xjHO1iKZbKuh75a2+8+Cfte9a/a90jARjNrMv5rYjnAKIQqLonJJelBVIE38tVSEnIMpdOhfkXqcxIdTVlOuw1VtZMD7YSMHAoQdwJS3FraUR3k4tc5KOObGi3zjEykQhEj2C2N6U92rDcY04tjMVxSReYTppCq9xvIdWBSo1NtgtdNYEG7rrJxkAOc6TrTnXUoPiz28ShNr2zXKibnqEAKf1vXA6m5Y7SwtrSXv4RAYVaV5VHnu8FhfXCROfOroa0uVZIfvgz3z0RU/PO8N54vVwfriWgXbaeH1MsKSQc0XLQfLDk08HOSCQqVrYLuBlzJTik70CxObs38jTZJQpPOmJZiNGJ6EmJPZm2GtEWCi0xA0mC6K0woFAKz5mK1tpAb/R0S0ecQSUyGIp4wiEJDr5JA8qq6M8xPbkXTvtTrRft3aaEagPFGUi/bm/J6TglN6EcfeBaW3NjblXsXhj2ucpdRavZefvS8QPHOKrrQtmNwHn7eYeWi6OofW0/AboyHo7zIyp22Z9FBKgi2R9bntg3/ikuccvycamd86xzVhTzAYEGWycLN7KKmGE9CEbEoE4fiTXqvZNjD/phStyrpEE6XR9KtdPrkf6V1oQM1D4sS5+Ros9Q== lucasmarino.xavier@gmail.com
+
+Lucas@LAPTOP-1DJH6TH2 MINGW64 ~/.ssh (master)
+$
